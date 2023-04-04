@@ -61,4 +61,19 @@ public class Course {
     public void setEnrolledStudents(int enrolledStudents) {
         EnrolledStudents = enrolledStudents;
     }
+
+	public long getId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public Object getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setDescription(Object description) {
+		// TODO Auto-generated method stub
+		
+	}
 }

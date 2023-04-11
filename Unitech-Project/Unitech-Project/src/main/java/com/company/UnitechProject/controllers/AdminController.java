@@ -32,7 +32,7 @@ public class AdminController {
 	//get the course
 	@GetMapping("/courses")
 	public List<Course> getCourses(){
-		return this.courseService.getCourse(Long.parseLong(courseId));
+		return this.courseService.getCourse();
 	}
 	
 	//get the single course
@@ -65,4 +65,5 @@ public class AdminController {
 		}catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
+	}
 }

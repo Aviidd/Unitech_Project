@@ -14,14 +14,15 @@ import com.company.UnitechProject.entities.Course;
 public class CourseServiceImpl implements CourseService{
 	
 	List<Course> list;
-	private object courseService;
+	private Object courseService;
+	private CourseDao courseDao;
 	
 	public CourseServiceImpl(){
 		// in this we temporary add the course using constructor
 		list = new ArrayList<>();
-		list.add(new Course(145, "Java core course", "this course contain basics of java"));
-		list.add(new Course(200,  "Spring core course", "this course contain basics of java"));
-		list.add(new Course(300, "Microservices core course", "this course contain basics of java"));
+		list.add(new Course(145, "Java core course", 1, 2, 3));
+//		list.add(new Course(200,  "Spring core course", "this course contain basics of java"));
+//		list.add(new Course(300, "Microservices core course", "this course contain basics of java"));
 		
 	}
 
@@ -61,7 +62,7 @@ public class CourseServiceImpl implements CourseService{
 
 	@Override
 	public void deleteCourse(long courseId) {
-		list = this.list.stream().filter(e->e.getId() != parseLong).collect(Collectors.toList());
+		//list = this.list.stream().filter(e->e.getId() != parseLong).collect(Collectors.toList());
 		
 	}
 	
